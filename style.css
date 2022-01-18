@@ -1,0 +1,72 @@
+@import url(./style-mobile.css);
+
+html{
+    height: 100%;
+}
+
+body{
+    margin: 0px;
+    height: 100%;
+}
+
+.item-0{
+    background-color: blue;
+    grid-area: header;
+    /* grid-column: 1 / 4;
+    grid-row: 1; */
+}
+
+.item-1{
+    background-color: red;
+    grid-area: footer;
+}
+
+.item-2{
+    background-color: orange;
+    grid-area: left;
+}
+
+.item-3{
+    background-color: yellow;
+    grid-area: right;
+}
+
+.item-4{
+    background-color: green;
+    grid-area: center;
+}
+
+.item-5{
+    background-color: tomato;
+    grid-area: link;
+}
+
+.child{
+    height: 100%;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 200px 1fr 150px;
+    grid-template-areas: "header header header"
+                         "left center right"
+                         "footer footer link";
+    /* gap: 8px 32px; */
+    height: 100%;
+}
+
+
+@media (max-width: 767px) {
+    .grid-container{
+        grid-template-rows: 200px 100px 1fr 100px 150px;
+        grid-template-areas: "header header header"
+                             "left left left"
+                             "center center right"
+                             "link link link"
+                             "footer footer footer";
+        
+    }
+}
+
+
